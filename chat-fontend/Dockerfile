@@ -1,6 +1,6 @@
 FROM node:20.11.0 as builder
 WORKDIR /app
-COPY package*.json .
+COPY package*.json ./
 COPY npm*.lock .
 RUN npm install
 COPY . .
