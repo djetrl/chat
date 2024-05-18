@@ -1,0 +1,159 @@
+@import 'reset-css';
+@import './variables'; 
+@import './layouts/chat';
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url(./fonts/Roboto-Light.ttf);
+}
+
+body{
+  background: #f4f7fd;
+}
+body, html, #root, .wrapper{
+  height: 100%;
+  color: #202020;
+  font-size: var(--main-size-text );
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family:Roboto-Light, sans-serif !important;
+}
+* {
+  outline: none;
+}
+.ant-btn-circle {
+  border: 0;
+  box-shadow: none;
+  color: #202020 !important;
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:after {
+    display: none;
+  }
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+a{
+  text-decoration: none;
+}
+.wrapper{
+  overflow: hidden;
+}
+.ant-popover{
+  .ant-popover-inner{
+    background:var(--background-color);
+  }
+ .ant-popover-arrow:before{
+    background:var(--background-color) !important;
+  }
+  .ant-btn{
+    background:inherit;
+    border:none;
+    color:var(--color-text);
+    &:where(.css-dev-only-do-not-override-12upa3x).ant-btn-default:not(:disabled):hover{
+      color: var(--blue);
+      border-color:var(--blue);
+    }
+  }
+}
+.ant-modal-content{
+  background:var(--background-color) !important; 
+  label{
+    color:var(--color-text) !important;
+  }
+  .ant-modal-title{
+    background:var(--background-color) !important;
+    color:var(--color-text) !important;
+  }
+  .ant-select-selection-search,.ant-select-selector{
+    background:var(--background-color) !important; 
+    border-color: var(--background-secondaryСolor) !important;
+    color:var(--color-text) !important;
+  }
+  .anticon-close {
+    svg{
+      color:var(--color-text) !important;
+    }
+    
+  }
+  button{
+    background: var(--background-secondaryСolor) !important;
+    color:var(--color-text) !important;
+    border-color: var(--background-secondaryСolor) !important;
+  }
+  .ant-modal-close{
+    background:none !important;
+  }
+}
+.ant-empty-description{
+  color:var(--color-text) !important;
+}
+.ant-notification-notice{
+  background:var(--background-secondaryСolor) !important;
+  .ant-notification-notice-message, .ant-notification-notice-description, .ant-notification-notice-close svg{
+    color: var(--color-text) !important;
+  }
+}
+
+.File-Icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(var( --main-size-text) + 10px);
+  height:calc(var( --main-size-text) + 10px);
+  padding:calc(var(--main-size-text) + 10px) calc(var(--main-size-text) + 8px);
+  text-align: center;
+  
+  background-color:var(--blue);
+  border-radius:6px 15px 6px 6px;
+  margin-right: calc(var(--main-size-text)) ;
+  transition: all 0.5s ease;
+  position: relative;
+  .ant-btn,p{
+    position: absolute;
+    color:white ;
+    svg{
+      color:white;
+    }
+  }
+  p{
+    visibility: visible;
+    transition: border-radius 0.3s ease-in;
+  }
+  .ant-btn{
+    margin-bottom: 10px;
+    visibility:hidden;
+ 
+  }
+  &:hover{
+    border-radius:6px 6px 6px 6px;
+    p{
+      visibility: hidden;
+    }
+    .ant-btn{
+      visibility:visible;
+      margin-bottom: 0;
+    }
+  }
+}
+input::placeholder{
+  background:inherit !important;
+  color:var( --color-text-secondary) !important;
+}
+.ant-select-dropdown {
+  background:var(--background-secondaryСolor) !important;
+}
+.ant-select-item{
+  color: var(--color-text) !important;
+}
+:where(.css-dev-only-do-not-override-12upa3x).ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled){
+  background-color:var(--background-color) !important;
+}

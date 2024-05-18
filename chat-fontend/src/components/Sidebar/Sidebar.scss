@@ -1,0 +1,86 @@
+.profile-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input{
+    padding: 10px ;
+    width: 85%;
+    min-width: 280px;
+    margin: 0 auto;
+  }
+  .btn-setting-submit{
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    font-size: 39px;
+    height: 60px;
+    width: 60px;
+    min-width: 60px;
+    color: white;
+    background: var(--blue);
+    box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.196733);
+    padding: 0;
+    border-radius: 30px;
+    border: 0;
+    margin-top: 14px;
+    &:hover, &:disabled{
+      background: var( --blue--dark);
+      color:rgb(160, 160, 160);
+    }
+  }
+  h3{
+    font-size: calc(var(--main-size-text) + 3px);
+    padding-bottom:calc(var(--main-size-text));
+  }
+}
+
+.deleteBtn{
+  margin: calc(var(--main-size-text) + 1px) ;
+  padding: calc(var(--main-size-text) + 6px) calc(var(--main-size-text) + 20px);
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.chat__sidebar-setting-chapter{
+
+.avatar_wrapper{
+  .ant-image{
+    img{
+      cursor: pointer;
+      border-radius: 0;
+      width: 100%;
+      height: 100%;
+      min-width: 242px;
+      max-height: 378px !important;
+      min-height:  calc(var(--main-size-text) + 230px) !important;
+      line-height: calc(var(--main-size-text) + 230px);
+      border:1px solid var(--background-secondaryСolor);
+      font-size: calc(var(--main-size-text) + 100px);
+      position: relative;
+    }
+
+    
+  }
+
+}
+
+}
+
+.ant-modal-body{
+  .chat-input_actions-upload{
+    span{
+      color:var(--color-text) !important
+    }
+  }
+}
+.ant-form-item-control-input{
+  span{
+    color:var(--color-text-secondary) !important;
+    background:inherit;
+  }
+  input{
+    background:inherit;
+    color:var(--color-text) !important;
+  }
+
+}
