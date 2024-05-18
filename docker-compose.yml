@@ -9,7 +9,11 @@ services:
     depends_on:
       - db
     container_name: blog-api
-
+  client:
+    build: ./chat-fontend
+    ports:
+      - "3000:3000"
+    container_name: blog-client
   db:
     image: mongo
     ports:
