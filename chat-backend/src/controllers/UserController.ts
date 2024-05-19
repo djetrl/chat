@@ -159,6 +159,7 @@ class UserController {
   }
 
   create = (req: express.Request, res: express.Response): void => {
+
     const postData: { email: string, fullname: string, password: string } = {
       email: req.body.email.toLowerCase(),
       fullname: req.body.fullname,
@@ -169,7 +170,7 @@ class UserController {
       res.status(422).json({ errors: errors.array() });
     } else {
       const user = new UserModel(postData);
-
+// сделать автоматическое получения http и вставить его в письмо
       user
         .save()
         .then((obj: IUser) => {
@@ -179,7 +180,7 @@ class UserController {
               from: "chatdjet@inbox.ru",
               to: postData.email,
               subject: "Подтверждение почты",
-              html: `Для того, чтобы подтвердить почту, перейдите <a href="http://localhost:3000/signup/verify?hash=${obj.confirm_hash}">по этой ссылке</a>`,
+              html: `Для того, чтобы подтвердить почту, перейдите <a href="${req.body.origin}/signup/verify?hash=${obj.confirm_hash}">по этой ссылке</a>`,
             },
             function (err: Error | null, info: SentMessageInfo) {
               if (err) {
@@ -312,7 +313,7 @@ class UserController {
     const query: string = req.query.query.toLowerCase();
     const newPassword: any = generateRandomPassword(10);
     UserModel.findOne({ email: query }).exec(function (err, user) {
-
+      
 
       if (err || user === null) {
         return res.status(404).json({
