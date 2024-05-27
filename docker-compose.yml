@@ -11,8 +11,9 @@ services:
     container_name: blog-api
   client:
     build: ./chat-fontend
+    stdin_open: true
     ports:
-      - "3000:3000"
+      - "3000:80"
     container_name: blog-client
   db:
     image: mongo

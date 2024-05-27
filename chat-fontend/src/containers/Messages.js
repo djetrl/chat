@@ -79,7 +79,11 @@ const Dialogs = ({
   }, []);
   useEffect(() => {
     const heightWindowSizeFunc = () => {
-      setHeightWindowSize(window.innerWidth/ 100);
+      if(window.innerHeight <= 600){
+        setHeightWindowSize((window.innerWidth + window.innerHeight) / 100);
+      }else{
+        setHeightWindowSize(window.innerWidth / 100);
+      }
     }
     window.onresize = () => heightWindowSizeFunc()
     heightWindowSizeFunc()
@@ -94,7 +98,7 @@ const Dialogs = ({
     } else {
 
         if(window.innerWidth < 1200){
-          setBlockHeight(heightWindowSize  + inputHeight + ((window.innerHeight / window.innerHeight) - 11 ))  ;
+          setBlockHeight(heightWindowSize  + inputHeight + ((window.innerHeight / window.innerHeight)  ))  ;
         }else{
           setBlockHeight(heightWindowSize + inputHeight + ((window.innerHeight / 200)))  ;
         }

@@ -1,5 +1,5 @@
 # Stage 1
-FROM node:14 as react-build
+FROM node as react-build
 WORKDIR /app
 COPY . ./
 COPY package.json package-lock.json ./

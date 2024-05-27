@@ -2,9 +2,8 @@
   "name": "chat",
   "version": "0.3.0",
   "private": false,
-
   "dependencies": {
-    "@emoji-mart/data": "^1.1.2",
+    "@emoji-mart/data": "^1.2.1",
     "@emoji-mart/react": "^1.1.1",
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -66,6 +65,6 @@
   },
   "devDependencies": {
     "react-styleguidist": "^13.1.1",
-    "sass": "^1.63.6"
+    "sass": "^1.77.2"
   }
 }
