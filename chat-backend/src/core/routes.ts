@@ -13,7 +13,7 @@ const createRoutes =(app:express.Express, io: socket.Server)=>{
   const MessageController = new MessageCtrl(io);
   const UploadFileController = new UploadCtrl();
   const corsOptions ={
-    origin:'http://localhost:3000', 
+    origin:'http://172.17.2.98:3000', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200,
     allowedHeaders:["content-type","access-control-allow-headers", "Token"],
