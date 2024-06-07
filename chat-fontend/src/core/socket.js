@@ -1,7 +1,7 @@
 import io from "socket.io-client";
 
 
-  var socket = io(window.location.origin.replace('3000','3003'));
+  var socket = io(window.location.origin.replace('4113','4193'));
 
   window.socket = socket; 
   socket.on('NEW:MESSAGE', function(msg){
