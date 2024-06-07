@@ -9,7 +9,6 @@ import { Dialogs as BaseDialogs } from "../components";
 const Dialogs = ({ fetchDialogs, updateReadedStatus, currentDialogId, items, userId,toggleSidebar  }) => {
   const [inputValue, setValue] = useState('');
   const [filtred, setFiltredItems] = useState(Array.from(items));
-console.log(items);
 
   const onChangeInput = (value = '') => {
     if (filtred) {

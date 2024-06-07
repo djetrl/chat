@@ -12,7 +12,7 @@ import { unlinkSync } from "fs";
 import jwt from 'jsonwebtoken';
 
 
-const http = "http://localhost:3003/";
+const http = "http://	217.71.129.139:4113/";
 const updateTokens = (user: IUser) => {
   const accessToken = createJWToken.generateAccessToken(user);
   const refreshToken = createJWToken.generateRefreshToken();
