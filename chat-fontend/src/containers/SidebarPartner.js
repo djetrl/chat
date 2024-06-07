@@ -149,7 +149,7 @@ const SidebarPartnerContainer = ({ user, dialogs, currentDialogId, toggleSidebar
         newData.avatar = currentDialog[0].avatar[0]._id
       }
     newData._id=currentDialog[0]._id
-    if (newData !== {}) {
+    if (newData != {}) {
       dialogsApi.update(newData)
       .then((data) => {
         fetchDialogs();

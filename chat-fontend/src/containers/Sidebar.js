@@ -183,7 +183,7 @@ const SidebarContainer = ({ user, updateData, theme, setTheme,removeAttachment,l
         newData.avatar = [];
       }
     }
-    if (newData !== {}) {
+    if (newData != {}) {
       userApi.update(newData).then((data) => {
 
         updateData(data.data)
