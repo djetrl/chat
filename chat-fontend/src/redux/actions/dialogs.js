@@ -1,7 +1,7 @@
 import {dialogsApi} from '../../utils/api';
 import socket from '../../core/socket';
 const Actions = {
-  setDialogs: items=> ({
+  setDialogs: items=> console.log(items) || ({
     type:'DIALOGS:SET_ITEMS',
     payload:items
   }),
@@ -25,6 +25,7 @@ const Actions = {
   },
   fetchDialogs: ()=>dispatch=>{
     dialogsApi.getAll().then(({data})=>{
+      console.log(data)
       dispatch(Actions.setDialogs(data));
     })
   }
