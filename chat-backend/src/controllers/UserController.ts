@@ -170,7 +170,6 @@ class UserController {
       res.status(422).json({ errors: errors.array() });
     } else {
       const user = new UserModel(postData);
-// сделать автоматическое получения http и вставить его в письмо
       user
         .save()
         .then((obj: IUser) => {
