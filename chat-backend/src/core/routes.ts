@@ -12,17 +12,17 @@ const createRoutes =(app:express.Express, io: socket.Server)=>{
   const DialogController = new DialogCtrl(io) ;
   const MessageController = new MessageCtrl(io);
   const UploadFileController = new UploadCtrl();
-  const corsOptions ={
-    origin:'http://217.71.129.139:4113', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200,
-    allowedHeaders:["content-type","access-control-allow-headers", "Token"],
-    preflightContinue: false,
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   const corsOptions ={
+//     origin:'http://217.71.129.139:4113', 
+//     credentials:true,            //access-control-allow-credentials:true
+//     optionSuccessStatus:200,
+//     allowedHeaders:["content-type","access-control-allow-headers", "Token"],
+//     preflightContinue: false,
+//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 
-}
+// }
 
-  app.use(cors(corsOptions))
+  // app.use(cors(corsOptions))
 
 
 

@@ -12,7 +12,7 @@ import { unlinkSync } from "fs";
 import jwt from 'jsonwebtoken';
 
 
-const http = "http://217.71.129.139:4193";
+const http = "http://localhost:3003/";
 const updateTokens = (user: IUser) => {
   const accessToken = createJWToken.generateAccessToken(user);
   const refreshToken = createJWToken.generateRefreshToken();
@@ -170,6 +170,7 @@ class UserController {
       res.status(422).json({ errors: errors.array() });
     } else {
       const user = new UserModel(postData);
+
       user
         .save()
         .then((obj: IUser) => {
