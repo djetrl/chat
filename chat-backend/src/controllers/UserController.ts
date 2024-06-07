@@ -285,8 +285,8 @@ class UserController {
               dateref.setTime(dateref.getTime() + (30 * 24 * 60 * 60 * 1000));
               var dateacs= new Date(); 
               dateacs.setTime(dateacs.getTime() + (1 * 60 * 60 * 1000));
-              res.cookie('refTKn', tokens.refreshToken, { sameSite: true, expires: dateref, secure:true})
-              res.cookie('acsTKn', tokens.accessToken.token, { sameSite: true, expires: dateacs, secure:true})
+              res.cookie('refTKn', tokens.refreshToken, { sameSite:  'none', expires: dateref, secure:true})
+              res.cookie('acsTKn', tokens.accessToken.token, { sameSite:  "none", expires: dateacs, secure:true})
               res.json({
                 status: "success",
                 token: tokens,
