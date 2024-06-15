@@ -16,7 +16,7 @@ const createRoutes =(app:express.Express, io: socket.Server)=>{
     origin:['http://217.71.129.139:4113', 'http://localhost:3003'], 
     credentials:true,   
     optionSuccessStatus:200,
-    allowedHeaders:["content-type","access-control-allow-headers", "Token","Origin", "X-Requested-With", "Accept", "Authorization", "Content-Encoding", "Folder" ],
+    allowedHeaders:["content-type","access-control-allow-headers", "Token","Origin", "X-Requested-With", "Accept", "Authorization", "Content-Encoding", "" ],
     preflightContinue: false,
     optionsSuccessStatus:204,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE, OPTIONS",
@@ -29,7 +29,7 @@ const createRoutes =(app:express.Express, io: socket.Server)=>{
   app.use(bodyParser.json());
   app.use(checkAuth);
   app.use(updateLastSeen);
-  app.use('/public/',express.static(path.join(__dirname, '../public')));
+  app.use('/public/',express.static(path.join(__dirname, '../../public')));
 
 
   app.route('/user/me')
