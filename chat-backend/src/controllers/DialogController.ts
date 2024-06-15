@@ -6,7 +6,7 @@ import { unlinkSync } from "fs";
 import { IDialog } from "../models/Dialog";
 import {isInArray} from '../utils';
 
-const https = "https://localhost:3003/";
+const https = "https://217.71.129.139:4160/";
 class DialogController {
 
 
