@@ -29,7 +29,7 @@ const createRoutes =(app:express.Express, io: socket.Server)=>{
   app.use(bodyParser.json());
   app.use(checkAuth);
   app.use(updateLastSeen);
-  app.use('/public/',express.static(path.join(__dirname, '../../public')));
+  app.use('/public/',express.static(path.join(__dirname, '../public')));
 
 
   app.route('/user/me')
