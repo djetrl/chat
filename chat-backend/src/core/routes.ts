@@ -16,7 +16,7 @@ const createRoutes =(app:express.Express, io: socket.Server)=>{
     origin:'http://217.71.129.139:4113', 
     credentials:true,   
     optionSuccessStatus:200,
-    allowedHeaders:"*",
+    allowedHeaders:["content-type","access-control-allow-headers", "Token","Origin", "X-Requested-With", "Accept", "Authorization", ],
     preflightContinue: false,
     optionsSuccessStatus:204,
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
